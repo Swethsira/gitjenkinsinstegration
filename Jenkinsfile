@@ -1,17 +1,17 @@
 pipeline {
     agent any
 
-    stage('Run') {
-    steps {
-        echo 'Running Java program...'
-        bat 'java Sample'
-    }
-}
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/Swethsira/gitjenkinsinstegration.git'
+            }
+        }
 
         stage('Build') {
             steps {
                 echo 'Compiling Java program...'
-                bat 'javac Sample.java'
+                bat 'javac sample.java'
             }
         }
 
