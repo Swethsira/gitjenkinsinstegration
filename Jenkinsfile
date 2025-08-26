@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Swethsira/gitjenkinsinstegration/new/master'
+                git 'https://github.com/Swethsira/gitjenkinsinstegration.git'
             }
         }
 
